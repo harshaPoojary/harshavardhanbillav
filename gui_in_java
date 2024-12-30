@@ -3,9 +3,9 @@ public class lms {
 	public static void main(String[] args) {
 		String name=JOptionPane.showInputDialog("enter the name");
 		JOptionPane.showMessageDialog(null,"hello"+name);
-		int age=Integer.parseInt(JOptionPane.showInputDialog("enter your age"));
+		int age=Integer.parseInt(JOptionPane.showInputDialog("enter your age"));//used to convert the integer
 		JOptionPane.showMessageDialog(null,"your age is "+ age);
-		double weight=Double.parseDouble(JOptionPane.showInputDialog("enter your weight"));
+		double weight=Double.parseDouble(JOptionPane.showInputDialog("enter your weight"));//used to convert the double
 		JOptionPane.showMessageDialog(null,"your weight is "+ weight+"kg");
 	}
 }
