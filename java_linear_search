@@ -2,22 +2,22 @@ import java.util.*;
 class Main {
    public static void main(String[] args) {
        Scanner sc=new Scanner(System.in);
-       System.out.println("pls enter the size of the array");
+       System.out.println("pls enter the size of the array");// takin the size of the array from the user
        int size=sc.nextInt();
       
        int[] arr=new int[size];
-       System.out.println("please enter the elements of the array");
+       System.out.println("please enter the elements of the array");//taking the input array from user
        for(int i=0;i<size;i++){
            arr[i]=sc.nextInt();
        }
-       System.out.println("the entered array is");
+       System.out.println("the entered array is");//printing the taken input array
        for(int i=0;i<size;i++){
            System.out.print(arr[i]);
        }
        System.out.println();
-       System.out.println("enter the target number whichs index you want to find");
+       System.out.println("enter the target number whichs index you want to find");//asking user to search the target element
        int target=sc.nextInt();
-       for(int i=0;i<size;i++){
+       for(int i=0;i<size;i++){//linera search algorithm
            if(target==arr[i]){
                System.out.println("the targeted index found at"+ i);
            }
