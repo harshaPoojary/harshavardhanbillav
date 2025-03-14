@@ -1,0 +1,25 @@
+//java code to find the max sum of subarray by slidng window
+public class Main{
+    public static int slideWindow(int [] nums,int k){
+        int maxSum=Integer.MIN_VALUE;
+        int currentSum=0;
+        
+        for(int i=0;i<nums.length;i++){
+            currentSum+=nums[i];
+            
+            if(i>=k-1){
+                maxSum=Math.max(maxSum,currentSum);
+                currentSum-=nums[i-(k-1)];
+            }
+        }
+      return maxSum;  
+    }
+public static void main(String[] args){
+    int[] nums={4,6,3,8,6,4,5,9,7,2};
+    int k=3;
+    int res=slideWindow(nums,k);
+    System.out.println("the maximum of the suub array of"+k+"size of the give array is"+res);
+}
+}
+o/p
+the maximum of the suub array of3size of the give array is21
