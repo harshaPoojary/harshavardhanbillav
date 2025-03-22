@@ -10,7 +10,7 @@ public class Main{
                 arr[j+1]=arr[j];
                 j--;
             }
-            arr[j=1]=key;
+            arr[j+1]=key;
         }
     System.out.println("the sorted array is"+Arrays.toString(arr));
     }
