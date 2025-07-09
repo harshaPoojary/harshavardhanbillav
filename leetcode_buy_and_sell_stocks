@@ -1,0 +1,31 @@
+import java.util.*;
+class Solution {
+    public static int maxProfit(int[] prices) {
+       int min_price=prices[0];
+       int max_profit=0;
+       int buys_day=0;
+       int sell_day=0;
+        for(int i=0;i<prices.length;i++){
+            if(prices[i]<min_price){
+                min_price=prices[i];
+                buys_day=i;
+            }
+            int profit=prices[i]-min_price;
+
+            if(profit>max_profit){
+                max_profit=profit;
+                sell_day=i;
+            }
+        }
+       return max_profit;
+    }
+    public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int[] prices=new int[n];
+    for(int i=0;i<n;i++){
+        prices[i]=sc.nextInt();
+    }
+   maxProfit(prices);
+    }
+}
