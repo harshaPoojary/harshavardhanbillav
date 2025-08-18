@@ -1,0 +1,23 @@
+//java code string rotated by two place
+import java.util.*;
+class Main {
+    public static boolean solve(String s1,String s2){
+        if(s1.length()!=s2.length()){
+            return false;
+        }
+        if(s1.length()<=2){
+            return s1.equals(s2);
+        }
+        String clock=s1.substring(2)+s1.substring(0,2);
+        
+        String anti=s1.substring(s1.length()-2)+s1.substring(0,s1.length()-2);
+        
+        return (s2.equals(clock)||s2.equals(anti));
+    }
+    public static void main(String[] args) {
+        String s1="microsoft";
+        String s2="crosoftmi";
+        
+        System.out.println(solve(s1,s2));
+    }
+}
